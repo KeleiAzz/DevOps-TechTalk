@@ -33,9 +33,26 @@ The configuration is quite easy, it will redirect you to Heroku and ask for auth
 ![image](pics/heroku.jpg)
 
 ##Running the pipeline
+###Basic usage
 Upon finishing all the settings, we can start running the building pipeline. Any changes in the current branch will trigger a build, and followed by the deployment. The building process looks like this, it has a nice GUI to show the process of each stage, and we can click a stage to view it's console output, thus can make us have more aware of what is going on.
 
 ![image](pics/building.png)
-![image](pics/console.png)   
+And we can see from the picture below, in this build it has two workers, in this way it can run the unit test and functional test in a parallel way.
+![image](pics/console.png)
+
+###Branch tracking
+By default Snap tracks master branch, but it can be setup to track any other branches.This helps resolve merge conflicts early. It will always tells status of branch with current base branch. 
+![image](pics/branch_tracking.png)
+In the `Automatic branch tracking` setting page, we can set branches with a certain prefix to be tracked, when changes are made to the tracked branches and an integration branch target (in this case the master branch), which will be used to set up an integration pipeline. Snap will run the same pipeline as master branch but without the deploy step. And when the build and test complete successfully, it will try to merge it to the master branch and run the build pipeline again.
+![image](pics/branch_tracking_pipeline.png)
+###Pull requests
+For any repository that is building on Snap CI, creating a new pull request on GitHub will create a project in Snap that will actively track that pull request, and update the status on the pull request on GitHub.
+
+Once a pull request is created, it will trigger a build in Snap, and the build pipeline is identical to the master branch. 
+![image](pics/pull_in_snap.png)
+![image](pics/pull_pipeline.png)
+We can view the status of this pull request in Github pull request page:
+![image](pics/pull_in_git.png)
+
 ##Reference
 * https://docs.snap-ci.com/getting-started/
