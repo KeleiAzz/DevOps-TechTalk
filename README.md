@@ -8,6 +8,7 @@
 
 ### Demo
 [video](https://drive.google.com/file/d/0B87f7178bIHnX08wRmFOZl9uLW8/view?usp=sharing)
+[slides](https://docs.google.com/presentation/d/1ycscxHwlHiRSbv9tKpJLLXmphNAAxStxDyeYeBX8VeA/edit#slide=id.p)
 ##Setup
 ###Add a repository
 Login to [Snap CI](https://snap-ci.com/), GitHub will ask if you want to give a set of permissions to Snap. Snap will present a list of all the repositories you have access to, and then you can add a repository to Snap
