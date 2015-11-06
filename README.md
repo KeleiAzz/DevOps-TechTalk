@@ -84,6 +84,18 @@ Once a pull request is created, it will trigger a build in Snap, and the build p
 We can view the status of this pull request in Github pull request page:
 ![image](pics/pull_in_git.png)
 
+###Notification
+Whenever the pipeline passes or fails, Snap will send a notification to the user, it can be set in the configuration page, and there are 7 ways of notification in total.
+![image](pics/notification.png)
+
+##Limitations
+1. One-click deployment is available for AWS and Heroku only. Major providers such as Azure and DigitalOcean not supported. 
+2. Cannot sync with other project host other than Github, e.g. Bitbucket.
+3. No IDE integration.
+
+##Conclusion
+Snap CI has many advantages as a continuous integration tool. It is easy to use. Developers can get start using Snap in only few steps. It supports many popular programming languages with different versions and different build tools. It integrates closely with GitHub. Different independent pipelines can do tests in parallel. Developers can choose either automatic tests or manual tests, depending on specific situations. Snap also allows deploying a web page from a command-line command. It offers developers more flexible space to do different kinds of tests.
+
 ##Reference
 * https://docs.snap-ci.com/getting-started/
 * https://blog.snap-ci.com/blog/2014/07/22/why-snapci-and-travisci-are-not-the-same-thing/
