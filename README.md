@@ -86,3 +86,4 @@ We can view the status of this pull request in Github pull request page:
 
 ##Reference
 * https://docs.snap-ci.com/getting-started/
+* https://blog.snap-ci.com/blog/2014/07/22/why-snapci-and-travisci-are-not-the-same-thing/
